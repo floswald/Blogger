@@ -86,7 +86,7 @@ p3 <- ggplot(subset(mdh,date > "2000-01-01" & Sector != "Financial"),aes(x=date,
 
 
 # print plots
-png(file="~/git/Blogger/UKjobs.png",height=700,width=600,pointsize=12)
+png(file="~/git/Blogger/UKjobs.png",height=500,width=600,pointsize=12)
 print(p2)
 dev.off()
 
