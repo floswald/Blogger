@@ -105,7 +105,7 @@ cbbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#000000", "#0072B2"
 p1 <- ggplot(mdh,aes(x=date,y=value,color=Sector,linetype=Sector)) + geom_line(size=1.2) + scale_y_continuous(name="thousands") + facet_wrap(~panel,nrow=2,scales="free_y") + scale_linetype_manual(values=c(rep("solid",4),rep("dotdash",3))) + scale_color_manual(values = cbbPalette)
 
 # without Financial
-p2 <- ggplot(subset(mdh,Sector != "Financial"),aes(x=date,y=value,color=Sector,linetype=Sector)) + geom_line(size=1.2) + scale_y_continuous(name="thousands") + facet_wrap(~panel,nrow=2,scales="free_y") + scale_linetype_manual(values=c(rep("solid",4),rep("dotdash",3))) + scale_color_manual(values = cbbPalette) + theme_bw()
+p2 <- ggplot(subset(mdh,Sector != "Financial"),aes(x=date,y=value,color=Sector,linetype=Sector)) + geom_line(size=1.2) + scale_y_continuous(name="thousands") + facet_wrap(~panel,nrow=2,scales="free_y") + scale_linetype_manual(values=c(rep("solid",4),rep("dotdash",3))) + scale_color_manual(values = cbbPalette) + theme_bw() + ggtitle(sprintf('Labor Market data: ONS JOBS03.\nHousing completions: www.gov.uk at http://bit.ly/19mCrpx'))
 
 p4 <- ggplot(md2h,aes(x=date,y=value,color=Sector,linetype=Sector)) + geom_line(size=1.2) + scale_y_continuous(name="thousands") + facet_wrap(~panel,nrow=2,scales="free_y") + scale_linetype_manual(values=c(rep("solid",4),rep("dotdash",3))) + scale_color_manual(values = cbbPalette) + theme_bw() + ggtitle('JOBS02')
 
